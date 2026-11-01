@@ -128,7 +128,8 @@ Both name the sessions still running before anything stops.
 
 ## Where it keeps things
 
-- The host list and the settings: `%APPDATA%\dev.softov.ahpdesk\` on Windows, `~/.config/dev.softov.ahpdesk/` on Linux.
+- The host list and the settings: `%APPDATA%\com.ahpio.desk\` on Windows, `~/.config/com.ahpio.desk/` on Linux.
+  Up to 0.2.3 this folder was `dev.softov.ahpdesk`; a desk that updates from one of those copies it over on its first start.
 - Tokens and SSH passwords: the OS keyring (Windows Credential Manager, or the Secret Service on Linux), never in the host list.
 - SSH server keys you trusted: `known_keys.json` beside the host list, and your own `~/.ssh/known_hosts` is read, never written.
 

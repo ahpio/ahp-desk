@@ -31,3 +31,4 @@ What exists today, and the first release that plans 01 to 10 build: [00-desk.md]
 | [14 - About and the desk's update check in windows of their own](desk/14-about-and-updates-windows/plan.md) | built | Restart check by hand with the release after 0.2.3 |
 | [15 - The Linux desk's bundled npm works when ahpd runs it](desk/15-linux-bundled-npm/plan.md) | built | - |
 | [16 - The desk finds a local ahpd that its PATH misses, and starts its own on a free port](desk/16-local-ahpd-off-path/plan.md) | planned | task 01 (task 03 beside it) |
+| [17 - The desk is com.ahpio.desk, and a desk updated from 0.2.3 keeps its hosts and its ahpd](desk/17-ahpio-desk-id/plan.md) | active | task 02, an update from 0.2.3 by hand, before the 0.3.0 tag |

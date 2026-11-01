@@ -3,6 +3,7 @@ mod app_window;
 mod frame;
 mod hosts;
 mod local_ahpd;
+mod old_id;
 mod settings;
 mod side_windows;
 mod ssh;
@@ -59,10 +60,15 @@ pub fn run() {
         })
         .setup(|app| {
             // AHP_DESK_CONFIG_DIR runs the desk on another host list, as a test
-            // does, so it never reads or writes the user's own hosts.
+            // does, so it never reads or writes the user's own hosts, nor moves
+            // the user's old folders.
             let config = match std::env::var_os("AHP_DESK_CONFIG_DIR") {
                 Some(dir) => std::path::PathBuf::from(dir),
-                None => app.path().app_config_dir()?,
+                None => {
+                    let config = app.path().app_config_dir()?;
+                    old_id::take_old_folders(&config, &app.path().app_local_data_dir()?);
+                    config
+                }
             };
             app.manage(HostStore::load(
                 config.join("hosts.json"),

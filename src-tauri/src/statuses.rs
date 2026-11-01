@@ -144,7 +144,10 @@ mod tests {
         let running = HostRunning::default();
         running.replace(HashMap::from([
             ("home".to_string(), vec!["Fix the build".to_string()]),
-            ("office".to_string(), vec!["Plan".to_string(), "Review".to_string()]),
+            (
+                "office".to_string(),
+                vec!["Plan".to_string(), "Review".to_string()],
+            ),
         ]));
         assert_eq!(running.all()["office"].len(), 2);
         running.forget("office");
