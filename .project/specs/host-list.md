@@ -5,6 +5,7 @@ covers:
   - src-tauri/src/hosts.rs
   - src-tauri/src/tokens.rs
   - src-tauri/src/statuses.rs
+  - src-tauri/src/old_id.rs
   - packages/shell/src/**
 decisions:
   - decisions/tokens-are-in-the-os-keyring-with-hosts-json-as-the-fallback.md
@@ -40,6 +41,14 @@ WHEN a host is added, changed or removed
 THEN the whole list is written to `hosts.json` in the app config folder, through a temporary file and a rename
 AND every window gets the event `hosts-changed` with the new list
 AND `AHP_DESK_CONFIG_DIR` puts the file in another folder, as a test does.
+
+### A desk updated from 0.2.3 keeps its hosts and its ahpd
+
+WHEN the desk starts as `com.ahpio.desk`, without `AHP_DESK_CONFIG_DIR`, and its app config folder holds nothing
+AND a `dev.softov.ahpdesk` folder sits beside it
+THEN that folder is copied into the app config folder, and the old one stays
+AND when the app local data folder holds nothing and a `dev.softov.ahpdesk` folder sits beside it, that folder is renamed to it, the ahpd the desk installed with it
+AND a failure is logged, and the desk starts without the old folders.
 
 ### A token is kept in the keyring, else in the file
 

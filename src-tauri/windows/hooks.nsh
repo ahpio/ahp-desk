@@ -61,4 +61,15 @@ Var AhpDeskNodeRuns
     DeleteRegValue HKCU "Software\Microsoft\Windows\CurrentVersion\Run" "ahp-desk"
     DeleteRegValue HKCU "Software\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved\Run" "ahp-desk"
   ${EndIf}
+  ; Up to 0.2.3 the identifier was dev.softov.ahpdesk, so its folders and its
+  ; install key were named after it and after "softov". A desk that updated
+  ; keeps the old host list there; removing the desk with its data removes
+  ; those too.
+  ${If} $DeleteAppDataCheckboxState = 1
+  ${AndIf} $UpdateMode <> 1
+    RmDir /r "$APPDATA\dev.softov.ahpdesk"
+    RmDir /r "$LOCALAPPDATA\dev.softov.ahpdesk"
+    DeleteRegKey HKCU "Software\softov\ahp-desk"
+    DeleteRegKey /ifempty HKCU "Software\softov"
+  ${EndIf}
 !macroend
