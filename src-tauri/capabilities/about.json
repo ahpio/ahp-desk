@@ -12,7 +12,7 @@
     "allow-about",
     {
       "identifier": "opener:allow-open-url",
-      "allow": [{ "url": "https://ahpio.com" }, { "url": "https://github.com/softov/ahp-desk/releases" }]
+      "allow": [{ "url": "https://ahpio.com" }, { "url": "https://github.com/ahpio/ahp-desk/releases" }]
     }
   ]
 }
