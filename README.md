@@ -1,6 +1,6 @@
 # <img src="docs/media/ahpio.svg" alt="" height="32"> ahp-desk
 
-[![release](https://img.shields.io/github/v/release/softov/ahp-desk)](https://github.com/softov/ahp-desk/releases/latest)
+[![release](https://img.shields.io/github/v/release/ahpio/ahp-desk)](https://github.com/ahpio/ahp-desk/releases/latest)
 ![license MIT](https://img.shields.io/badge/license-MIT-blue)
 ![Agent Host Protocol 1.0.0](https://img.shields.io/badge/AHP-1.0.0-0b7285)
 
@@ -27,7 +27,7 @@ Keep a list of your hosts, see which ones are up, and open each one in a window 
 
 ## Install
 
-Download the latest version of `ahp-desk` from [GitHub Releases](https://github.com/softov/ahp-desk/releases/latest).
+Download the latest version of `ahp-desk` from [GitHub Releases](https://github.com/ahpio/ahp-desk/releases/latest).
 
 ### Windows 10 / 11
 
@@ -156,4 +156,4 @@ Use it for a personal setup, a team that shares servers, or a fleet of hosts.
 `ahp-desk` is part of ahpio, the Agent Host Platform.
 Get to know the whole platform at [ahpio.com](https://ahpio.com).
 
-[Releases](https://github.com/softov/ahp-desk/releases/latest) · [Source Code](https://github.com/softov/ahp-desk) · [ahpio.com](https://ahpio.com)
+[Releases](https://github.com/ahpio/ahp-desk/releases/latest) · [Source Code](https://github.com/ahpio/ahp-desk) · [ahpio.com](https://ahpio.com)

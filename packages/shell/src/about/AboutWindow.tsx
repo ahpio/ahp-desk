@@ -6,7 +6,7 @@ import { WindowBar } from '../WindowBar.js';
 import { about, type About } from './ipc.js';
 
 const SITE = 'https://ahpio.com';
-const RELEASES = 'https://github.com/softov/ahp-desk/releases';
+const RELEASES = 'https://github.com/ahpio/ahp-desk/releases';
 
 /** The About window: the desk's, ahpw's and Node's versions, the license, and the site and releases. */
 export function AboutWindow() {

@@ -57,7 +57,7 @@ pnpm --version
 ## Get the code
 
 ```sh
-git clone git@github.com:softov/ahp-desk.git
+git clone git@github.com:ahpio/ahp-desk.git
 cd ahp-desk
 pnpm install
 ```
